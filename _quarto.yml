@@ -1,0 +1,35 @@
+project:
+  type: book
+
+book:
+  title: "Perspectives Dataexp 2024"
+  author: "Valérian Wrobel"
+  date: "08/01/2024"
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - part: A-energy_and_data.qmd
+      chapters: 
+        - A-1-current_stakes.qmd
+        - A-2-dataexp_abilities.qmd
+    - part: B-technical_framework.qmd
+      chapters: 
+        - B-1-general_stack.qmd
+        - B-2-focus_on_r_code.qmd
+    - part: C-work_organisation.qmd
+      chapters: 
+        - C-1-team.qmd
+        - C-2-development_cycles.qmd
+    - summary.qmd
+    - references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme: cosmo
+  pdf:
+    documentclass: scrreprt
+
+editor: visual
+

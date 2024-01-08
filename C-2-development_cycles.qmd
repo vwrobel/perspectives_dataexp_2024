@@ -1,0 +1,43 @@
+## Cycles de développement
+
+```{r}
+#| echo: false
+library(vistime)
+library(tibble)
+library(ggplot2)
+```
+
+### Sprint
+
+2 semaines de 4 jours
+
+### Sprint sabbatique
+
+```{mermaid}
+flowchart LR
+  A[Hard edge] --> B(Round edge)
+  B --> C{Decision}
+  C --> D[Result one]
+  C --> E[Result two]
+```
+
+### Année sabbatique
+
+![](sabbatical_year.svg)
+
+```{r}
+#| echo: false
+#| include: false
+timeline_data <- tibble::tibble(
+  event = c("Travail", "Repos"), 
+  start = c("2025-01-01", "2031-01-01") |> as.Date(), 
+  end = c("2030-12-31", "2031-12-31") |> as.Date()
+)
+gg_vistime(timeline_data) +
+  scale_x_datetime(
+    date_breaks = "1 year",
+    minor_breaks = NULL
+  ) +
+  theme_minimal()
+    
+```
